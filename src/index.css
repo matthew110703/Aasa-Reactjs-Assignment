@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+
+@theme {
+    /* Colors */
+    --color-sapphire: #2E54BFff;
+    --color-royal-blue: #3C40C6ff;
+    --color-electric-pink: #C600DFff;
+    --color-shocking-pink: #F700C0ff;
+}
+
+:root {
+    --grad : linear-gradient(90deg, var(--color-sapphire) 0%, var(--color-royal-blue) 20%,  var(--color-electric-pink) 80%, var(--color-shocking-pink) 100%)
+}
+.grad {
+    background: var(--grad);
+}
+
+.text-grad {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-grad {
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 20px;
+    background: linear-gradient(white, white) padding-box, 
+                linear-gradient(to top, var(--color-sapphire), var(--color-royal-blue), var(--color-electric-pink), var(--color-shocking-pink)) border-box;
+    border: 1px solid transparent;
+}
+
+/* Rotate arrow down when open */
+details[open] img {
+    transform: rotate(180deg);
+}
+
