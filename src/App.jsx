@@ -76,7 +76,7 @@ const App = () => {
                 key={issue.id}
                 className="flex flex-col items-center gap-y-4 rounded-xl bg-white p-4 shadow"
               >
-                <img src={issue.icon} alt="icon" width={48} />
+                <img src={issue.icon} alt="icon" width={32} />
                 <p className="text-sm font-semibold">{issue.text}</p>
               </article>
             ))}

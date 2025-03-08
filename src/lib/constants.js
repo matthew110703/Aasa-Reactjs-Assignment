@@ -2,12 +2,12 @@
 export const ISSUES = [
   {
     id: 1,
-    icon: "https://placehold.co/32",
+    icon: "/icons/close.svg",
     text: "Struggle with complex software tools",
   },
   {
     id: 2,
-    icon: "https://placehold.co/32",
+    icon: "/icons/close.svg",
     text: "Feel stuck without structured learning",
   },
   {
