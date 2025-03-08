@@ -1,4 +1,5 @@
 // UI
+import { useEffect, useState } from "react";
 import { Button, Card, Detail } from "./components";
 
 // Constants
@@ -12,9 +13,23 @@ import {
 } from "./lib/constants";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const width = window.innerWidth;
+
+    if (width > 768) {
+      alert("Please view this page in mobile view");
+      window.close();
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  if (loading) return null;
+
   return (
     <section aria-label="home" className="container mx-auto space-y-6">
-      <header className="flex items-center justify-between px-4 py-8">
+      <header className="flex items-center justify-between px-4 py-6">
         <img src="/logo.jpg" alt="Logo" width={128} />
         <Button
           text={"Get Started"}
